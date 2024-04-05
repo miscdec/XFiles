@@ -20,17 +20,6 @@ jobs:
         distribution: 'temurin'
         cache: gradle
 
-    - name: install ndk
-      run: 
-        echo y | sdkmanager "tools"
-        echo y | sdkmanager "platform-tools"
-        echo y | sdkmanager "tools"
-        echo y | sdkmanager "build-tools;30.0.3"
-        echo y | sdkmanager "platforms;android-30"
-        echo y | sdkmanager "ndk-bundle"
-        echo y | sdkmanager "ndk;21.3.6528147"
-        echo y | sdkmanager "cmake;3.10.2.4988404"
-
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
 
